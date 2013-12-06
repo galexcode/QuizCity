@@ -38,6 +38,7 @@
 		00FA32EF1851F17E00D325B9 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32EE1851F17E00D325B9 /* yellow.png */; };
 		00FA32F11851F31A00D325B9 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32F01851F31A00D325B9 /* green.png */; };
 		00FA32F41851FDF200D325B9 /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FA32F31851FDF200D325B9 /* AnswerViewController.m */; };
+		00FA32F7185260C100D325B9 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FA32F6185260C100D325B9 /* ProgressViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		00FA32F01851F31A00D325B9 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		00FA32F21851FDF200D325B9 /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
 		00FA32F31851FDF200D325B9 /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
+		00FA32F5185260C100D325B9 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		00FA32F6185260C100D325B9 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				006A8A8E1850AD890003501F /* AppDelegate.h */,
 				006A8A8F1850AD890003501F /* AppDelegate.m */,
 				006A8A911850AD890003501F /* Main.storyboard */,
+				00FA32F5185260C100D325B9 /* ProgressViewController.h */,
+				00FA32F6185260C100D325B9 /* ProgressViewController.m */,
 				0021D7C01851C40D00903FD0 /* MapViewController.h */,
 				0021D7C11851C40D00903FD0 /* MapViewController.m */,
 				0021D7C31851C57700903FD0 /* MyAnnotation.h */,
@@ -339,6 +344,7 @@
 				0068015D1850E1BA0006DA59 /* HelloTableViewController.m in Sources */,
 				0021D7B91851B91F00903FD0 /* LevelViewController.m in Sources */,
 				006A8A901850AD890003501F /* AppDelegate.m in Sources */,
+				00FA32F7185260C100D325B9 /* ProgressViewController.m in Sources */,
 				0021D7C21851C40D00903FD0 /* MapViewController.m in Sources */,
 				0021D7BF1851C23500903FD0 /* PlaceViewController.m in Sources */,
 				006A8A8C1850AD890003501F /* main.m in Sources */,

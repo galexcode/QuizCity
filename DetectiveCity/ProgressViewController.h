@@ -1,5 +1,5 @@
 //
-//  AnswerViewController.h
+//  ProgressViewController.h
 //  DetectiveCity
 //
 //  Created by a я on 06.12.13.
@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AnswerViewController : UIViewController
-
-@property (strong, nonatomic) NSString* answer;
-
+@interface ProgressViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 
 @end
