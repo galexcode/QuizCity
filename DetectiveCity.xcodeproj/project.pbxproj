@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0021D7B91851B91F00903FD0 /* LevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0021D7B81851B91F00903FD0 /* LevelViewController.m */; };
+		0021D7BC1851C0C700903FD0 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0021D7BB1851C0C700903FD0 /* QuizViewController.m */; };
+		0021D7BF1851C23500903FD0 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0021D7BE1851C23500903FD0 /* PlaceViewController.m */; };
+		0021D7C21851C40D00903FD0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0021D7C11851C40D00903FD0 /* MapViewController.m */; };
+		0021D7C51851C57700903FD0 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0021D7C41851C57700903FD0 /* MyAnnotation.m */; };
 		0068015D1850E1BA0006DA59 /* HelloTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0068015C1850E1BA0006DA59 /* HelloTableViewController.m */; };
 		006801621850F5040006DA59 /* HelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006801611850F5040006DA59 /* HelloViewController.m */; };
 		006A8A801850AD890003501F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006A8A7F1850AD890003501F /* Foundation.framework */; };
@@ -29,6 +34,10 @@
 		006A8ABF1850B60E0003501F /* kremlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB91850B60E0003501F /* kremlin.jpg */; };
 		006A8AC01850B60E0003501F /* teatr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8ABA1850B60E0003501F /* teatr.jpg */; };
 		006A8AC21850B7DF0003501F /* puzzle green.png in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AC11850B7DF0003501F /* puzzle green.png */; };
+		00FA32ED1851F10D00D325B9 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32EC1851F10D00D325B9 /* red.png */; };
+		00FA32EF1851F17E00D325B9 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32EE1851F17E00D325B9 /* yellow.png */; };
+		00FA32F11851F31A00D325B9 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32F01851F31A00D325B9 /* green.png */; };
+		00FA32F41851FDF200D325B9 /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FA32F31851FDF200D325B9 /* AnswerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0021D7B71851B91F00903FD0 /* LevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelViewController.h; sourceTree = "<group>"; };
+		0021D7B81851B91F00903FD0 /* LevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelViewController.m; sourceTree = "<group>"; };
+		0021D7BA1851C0C700903FD0 /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		0021D7BB1851C0C700903FD0 /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
+		0021D7BD1851C23500903FD0 /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		0021D7BE1851C23500903FD0 /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		0021D7C01851C40D00903FD0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		0021D7C11851C40D00903FD0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		0021D7C31851C57700903FD0 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		0021D7C41851C57700903FD0 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		0068015B1850E1BA0006DA59 /* HelloTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloTableViewController.h; sourceTree = "<group>"; };
 		0068015C1850E1BA0006DA59 /* HelloTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloTableViewController.m; sourceTree = "<group>"; };
 		0068015E1850E4700006DA59 /* StaticTableParentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticTableParentProtocol.h; sourceTree = "<group>"; };
@@ -72,6 +91,11 @@
 		006A8AB91850B60E0003501F /* kremlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kremlin.jpg; sourceTree = "<group>"; };
 		006A8ABA1850B60E0003501F /* teatr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teatr.jpg; sourceTree = "<group>"; };
 		006A8AC11850B7DF0003501F /* puzzle green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "puzzle green.png"; sourceTree = "<group>"; };
+		00FA32EC1851F10D00D325B9 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		00FA32EE1851F17E00D325B9 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		00FA32F01851F31A00D325B9 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		00FA32F21851FDF200D325B9 /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
+		00FA32F31851FDF200D325B9 /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +161,18 @@
 				006A8A8E1850AD890003501F /* AppDelegate.h */,
 				006A8A8F1850AD890003501F /* AppDelegate.m */,
 				006A8A911850AD890003501F /* Main.storyboard */,
+				0021D7C01851C40D00903FD0 /* MapViewController.h */,
+				0021D7C11851C40D00903FD0 /* MapViewController.m */,
+				0021D7C31851C57700903FD0 /* MyAnnotation.h */,
+				0021D7C41851C57700903FD0 /* MyAnnotation.m */,
+				00FA32F21851FDF200D325B9 /* AnswerViewController.h */,
+				00FA32F31851FDF200D325B9 /* AnswerViewController.m */,
+				0021D7BD1851C23500903FD0 /* PlaceViewController.h */,
+				0021D7BE1851C23500903FD0 /* PlaceViewController.m */,
+				0021D7BA1851C0C700903FD0 /* QuizViewController.h */,
+				0021D7BB1851C0C700903FD0 /* QuizViewController.m */,
+				0021D7B71851B91F00903FD0 /* LevelViewController.h */,
+				0021D7B81851B91F00903FD0 /* LevelViewController.m */,
 				006A8A971850AD890003501F /* Images.xcassets */,
 				006A8A861850AD890003501F /* Supporting Files */,
 				0068015B1850E1BA0006DA59 /* HelloTableViewController.h */,
@@ -179,6 +215,9 @@
 		006A8AB41850B5E50003501F /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				00FA32F01851F31A00D325B9 /* green.png */,
+				00FA32EE1851F17E00D325B9 /* yellow.png */,
+				00FA32EC1851F10D00D325B9 /* red.png */,
 				006A8AC11850B7DF0003501F /* puzzle green.png */,
 				006A8AB51850B60E0003501F /* logo.jpg */,
 				006A8AB61850B60E0003501F /* metro.png */,
@@ -269,12 +308,15 @@
 				006A8A981850AD890003501F /* Images.xcassets in Resources */,
 				006A8AC21850B7DF0003501F /* puzzle green.png in Resources */,
 				006A8ABF1850B60E0003501F /* kremlin.jpg in Resources */,
+				00FA32EF1851F17E00D325B9 /* yellow.png in Resources */,
 				006A8A8A1850AD890003501F /* InfoPlist.strings in Resources */,
 				006A8AC01850B60E0003501F /* teatr.jpg in Resources */,
 				006A8A931850AD890003501F /* Main.storyboard in Resources */,
 				006A8ABB1850B60E0003501F /* logo.jpg in Resources */,
 				006A8ABC1850B60E0003501F /* metro.png in Resources */,
+				00FA32F11851F31A00D325B9 /* green.png in Resources */,
 				006A8ABE1850B60E0003501F /* blazh.jpg in Resources */,
+				00FA32ED1851F10D00D325B9 /* red.png in Resources */,
 				006A8ABD1850B60E0003501F /* moscowcity.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,9 +337,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0068015D1850E1BA0006DA59 /* HelloTableViewController.m in Sources */,
+				0021D7B91851B91F00903FD0 /* LevelViewController.m in Sources */,
 				006A8A901850AD890003501F /* AppDelegate.m in Sources */,
+				0021D7C21851C40D00903FD0 /* MapViewController.m in Sources */,
+				0021D7BF1851C23500903FD0 /* PlaceViewController.m in Sources */,
 				006A8A8C1850AD890003501F /* main.m in Sources */,
+				00FA32F41851FDF200D325B9 /* AnswerViewController.m in Sources */,
 				006801621850F5040006DA59 /* HelloViewController.m in Sources */,
+				0021D7BC1851C0C700903FD0 /* QuizViewController.m in Sources */,
+				0021D7C51851C57700903FD0 /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
