@@ -9,7 +9,9 @@
 #import "AnswerViewController.h"
 
 @interface AnswerViewController ()
-
+{
+    NSInteger level;
+}
 @end
 
 @implementation AnswerViewController
@@ -29,11 +31,18 @@
 	// Do any additional setup after loading the view.
     
 //    UIImageView * imageView = (id)[cell.contentView viewWithTag:200];
+    level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    
+    NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
+    NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
+    
+    NSArray *answers = creatureDictionary[@"answerText"];
     
     UILabel* answerLabel = (id)[self.view viewWithTag:100];
     answerLabel.text = [NSString stringWithFormat:@"Your answer is: %@", self.answer];
     UILabel* resultLabel = (id)[self.view viewWithTag:200];
-    if( [self.answer isEqualToString:@"11"])
+
+    if( [self.answer isEqualToString:answers[level]])
     {
         resultLabel.text = @"Correct!";
         UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];

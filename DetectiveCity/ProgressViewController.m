@@ -9,7 +9,9 @@
 #import "ProgressViewController.h"
 
 @interface ProgressViewController ()
-
+{
+    NSInteger level;
+}
 @end
 
 @implementation ProgressViewController
@@ -34,6 +36,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +55,8 @@
 {
     if ([[segue identifier] isEqualToString:@"level"])
     {
-//++
+        level++;
+        [[NSUserDefaults standardUserDefaults] setInteger:level forKey:@"Level"];
     }
 }
 

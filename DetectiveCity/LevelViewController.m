@@ -9,7 +9,9 @@
 #import "LevelViewController.h"
 
 @interface LevelViewController ()
-
+{
+    NSInteger level;
+}
 @end
 
 @implementation LevelViewController
@@ -36,6 +38,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
+    level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    
+    NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
+    NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
+    
+    NSArray *texts = creatureDictionary[@"levelText"];
+
+    UITextView* textView = (id)[self.view viewWithTag:10];
+    textView.text = texts[level];;
 }
 
 - (void)didReceiveMemoryWarning

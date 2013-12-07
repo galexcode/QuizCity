@@ -12,6 +12,7 @@
 @interface QuizViewController ()
 {
     NSString *youranswer;
+    NSInteger level;
 }
 
 @end
@@ -31,6 +32,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    
+    NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
+    NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
+    
+    NSArray *texts = creatureDictionary[@"questionText"];
+    
+    UITextView* textView = (id)[self.view viewWithTag:10];
+    textView.text = texts[level];
+    
+    NSArray *variants = [creatureDictionary[@"variantsText"] objectAtIndex:level];
+    for(int i=0; i<4; i++)
+    {
+        UIButton *btn = (id)[self.view viewWithTag:(i+1)*100];
+        [btn setTitle:variants[i] forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning

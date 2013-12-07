@@ -9,7 +9,9 @@
 #import "PlaceViewController.h"
 
 @interface PlaceViewController ()
-
+{
+    NSInteger level;
+}
 @end
 
 @implementation PlaceViewController
@@ -34,7 +36,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    
+    NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
+    NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
+    
+    NSArray *texts = creatureDictionary[@"placeText"];
 
+    UITextView* textView = (id)[self.view viewWithTag:10];
+    textView.text = texts[level];
+
+    NSArray *images = creatureDictionary[@"placeImage"];
+    UIImageView* imageView = (id)[self.view viewWithTag:20];
+    imageView.image = [UIImage imageNamed:images[level]];
 }
 
 - (void)didReceiveMemoryWarning

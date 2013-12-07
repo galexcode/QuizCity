@@ -50,6 +50,10 @@
         self.helloTableViewController = segue.destinationViewController;
         self.helloTableViewController.delegate =self;
     }
+    if ([segue.identifier isEqualToString: @"start"])
+    {
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Level"];
+    }
 }
 
 - (void) tableView: (UITableView *) tableView

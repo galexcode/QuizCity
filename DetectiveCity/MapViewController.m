@@ -83,7 +83,6 @@
     switch (myannatation.picTag) {
         case 1:
             pin.image = [UIImage imageNamed:@"yellow.png"];
-        
             break;
         case 2:
             pin.image = [UIImage imageNamed:@"green.png"];
