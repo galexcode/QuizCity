@@ -66,7 +66,6 @@
     youranswer = sender.titleLabel.text;
     NSLog(@"Your answer is: %@", youranswer);
     [self performSegueWithIdentifier:@"answer" sender:nil];
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -53,6 +53,8 @@
     if ([segue.identifier isEqualToString: @"start"])
     {
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Level"];
+        NSMutableSet *set = [NSMutableSet set];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:set] forKey:@"Answers"];
     }
 }
 

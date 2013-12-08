@@ -13,6 +13,7 @@
 {
     NSMutableArray *locations;
     NSInteger level;
+    NSMutableSet *answersSet;
 }
 @end
 
@@ -40,6 +41,7 @@
     [super viewDidLoad];
     
     level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    answersSet = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"Answers"]];
     
     NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
     NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
@@ -52,11 +54,20 @@
         float lat = [[coords[i] objectAtIndex:0] doubleValue];
         float lng = [[coords[i] objectAtIndex:1] doubleValue];
         MyAnnotation *pin = [[MyAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(lat, lng)];
-        pin.picTag = 1;
+        
+  
+        if(i>=level)
+                pin.picTag = 1;
+        else
+            if([answersSet containsObject:[NSNumber numberWithInt:i]])
+                pin.picTag = 2;
+            else
+                pin.picTag = 3;
+        
         locations[i] = pin;
     }
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(((MyAnnotation*)locations[level]).coordinate, 7000, 7000);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(((MyAnnotation*)locations[level]).coordinate, 2000, 2000);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     [self.mapView setRegion:adjustedRegion animated:YES];
     

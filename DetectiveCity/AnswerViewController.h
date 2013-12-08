@@ -12,6 +12,4 @@
 
 @property (strong, nonatomic) NSString* answer;
 
-@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
-
 @end

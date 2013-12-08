@@ -11,6 +11,7 @@
 @interface AnswerViewController ()
 {
     NSInteger level;
+    NSMutableSet *answersSet;
 }
 @end
 
@@ -39,6 +40,7 @@
     
 //    UIImageView * imageView = (id)[cell.contentView viewWithTag:200];
     level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    answersSet = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"Answers"]];
     
     NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
     NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
@@ -52,7 +54,9 @@
     if( [self.answer isEqualToString:answers[level]])
     {
         resultLabel.text = @"Correct!";
-
+        [answersSet addObject:[NSNumber numberWithInt:level]];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:answersSet] forKey:@"Answers"];
+        
     }
     else
     {
@@ -76,7 +80,6 @@
 //        NSLog(@"Dismiss completed");
 //    }];
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 - (void)performContinue

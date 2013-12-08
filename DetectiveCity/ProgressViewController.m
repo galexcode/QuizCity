@@ -12,6 +12,8 @@
 @interface ProgressViewController ()
 {
     NSInteger level;
+    NSMutableSet *answersSet;
+    NSInteger quizSize;
 }
 @end
 
@@ -38,6 +40,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    answersSet = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"Answers"]];
+ 
+    NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
+    NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
+    
+    NSArray *texts = creatureDictionary[@"levelText"];
+    quizSize = texts.count;
+    
+    if([answersSet containsObject:[NSNumber numberWithInt:level]])
+        NSLog(@"qqqq");
+    
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +64,8 @@
 - (void)performContinue
 {
     NSLog(@"Continue");
-    [self performSegueWithIdentifier:@"level" sender:nil];
+    if(level!=quizSize-1)
+        [self performSegueWithIdentifier:@"level" sender:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
