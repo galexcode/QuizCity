@@ -10,4 +10,5 @@
 
 @interface LevelViewController : UIViewController
 
+- (void)hideBackButton;
 @end

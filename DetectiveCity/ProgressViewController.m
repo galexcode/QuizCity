@@ -7,6 +7,7 @@
 //
 
 #import "ProgressViewController.h"
+#import "LevelViewController.h"
 
 @interface ProgressViewController ()
 {
@@ -28,8 +29,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];
-    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    [self.toolBar setItems:[NSArray arrayWithObjects:flexSpace, btnContinue, nil]];
+    [self.navigationItem setRightBarButtonItem:btnContinue animated:NO];
+    [self.navigationItem setHidesBackButton:YES animated:NO];
 }
 
 - (void)viewDidLoad
@@ -57,6 +58,8 @@
     {
         level++;
         [[NSUserDefaults standardUserDefaults] setInteger:level forKey:@"Level"];
+        LevelViewController *lvl = [segue destinationViewController];
+        [lvl hideBackButton];
     }
 }
 

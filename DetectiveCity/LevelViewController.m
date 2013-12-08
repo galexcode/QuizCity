@@ -22,12 +22,12 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    
     UIBarButtonItem *btnMap = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(performMap)];
     UIBarButtonItem *btnClue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performClue)];
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:btnClue, btnMap, nil] animated:NO];
@@ -65,6 +65,11 @@
 {
     NSLog(@"Continue");
     [self performSegueWithIdentifier:@"continue" sender:nil];
+}
+
+- (void)hideBackButton
+{
+    [self.navigationItem setHidesBackButton:YES animated:NO];
 }
 
 @end

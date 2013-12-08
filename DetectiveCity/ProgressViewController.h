@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ProgressViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
+
 
 @end

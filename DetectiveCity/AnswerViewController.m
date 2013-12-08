@@ -25,6 +25,13 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];
+    [self.navigationItem setRightBarButtonItem:btnContinue animated:NO];
+    [self.navigationItem setHidesBackButton:YES animated:NO];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,17 +52,13 @@
     if( [self.answer isEqualToString:answers[level]])
     {
         resultLabel.text = @"Correct!";
-        UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];
-        UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        [self.toolBar setItems:[NSArray arrayWithObjects:flexSpace, btnContinue, nil]];
+
     }
     else
     {
         resultLabel.text = @"Incorrect =(";
-        UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];
-        UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         UIBarButtonItem *btnRetry = [[UIBarButtonItem alloc] initWithTitle:@"Retry" style:UIBarButtonItemStyleBordered target:self action:@selector(retryTaped)];
-        [self.toolBar setItems:[NSArray arrayWithObjects:btnRetry, flexSpace, btnContinue, nil]];
+        [self.navigationItem setLeftBarButtonItem:btnRetry animated:NO];
     }
         
 }
@@ -69,9 +72,10 @@
 - (void)retryTaped
 {
     NSLog(@"Retry");
-    [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"Dismiss completed");
-    }];
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        NSLog(@"Dismiss completed");
+//    }];
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 
