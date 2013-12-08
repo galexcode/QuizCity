@@ -46,7 +46,7 @@
     NSArray *texts = creatureDictionary[@"levelText"];
 
     UITextView* textView = (id)[self.view viewWithTag:10];
-    textView.text = texts[level];;
+    textView.text = texts[level];
 }
 
 - (void)didReceiveMemoryWarning

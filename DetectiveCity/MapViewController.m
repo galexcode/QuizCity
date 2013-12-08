@@ -11,8 +11,8 @@
 
 @interface MapViewController ()
 {
-//    CLLocationCoordinate2D droppedAt;
-    NSArray *locations;
+    NSMutableArray *locations;
+    NSInteger level;
 }
 @end
 
@@ -27,28 +27,40 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
     
     UIBarButtonItem *btnHome = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStyleBordered target:self action:@selector(performHome)];
     UIBarButtonItem *btnProgress = [[UIBarButtonItem alloc] initWithTitle:@"Progress" style:UIBarButtonItemStyleBordered target:self action:@selector(performProgress)];
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:btnProgress, btnHome, nil]];
 
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(55.752511, 37.623136), 7000, 7000);
+    level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    
+    NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
+    NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
+    
+    NSArray *coords = creatureDictionary[@"locations"];
+    locations = [NSMutableArray arrayWithCapacity:coords.count];
+    
+    for(int i =0; i<coords.count;i++)
+    {
+        float lat = [[coords[i] objectAtIndex:0] doubleValue];
+        float lng = [[coords[i] objectAtIndex:1] doubleValue];
+        MyAnnotation *pin = [[MyAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(lat, lng)];
+        pin.picTag = 1;
+        locations[i] = pin;
+    }
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(((MyAnnotation*)locations[level]).coordinate, 7000, 7000);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     [self.mapView setRegion:adjustedRegion animated:YES];
     
-    MyAnnotation *pin1 = [[MyAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(55.752511, 37.623136)];
-    MyAnnotation *pin2 = [[MyAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(55.760079,37.618587)];
-    MyAnnotation *pin3 = [[MyAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(55.748971,37.53855)];
-    MyAnnotation *pin4 = [[MyAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(55.749903,37.615905)];
-    pin1.picTag = 1;
-    pin2.picTag = 2;
-    pin3.picTag = 3;
-    pin4.picTag = 1;
-    locations = [NSArray arrayWithObjects:pin1, pin2, pin3, pin4, nil];
     [self.mapView addAnnotations:locations];
 }
 

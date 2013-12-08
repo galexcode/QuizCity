@@ -43,7 +43,7 @@
     textView.text = texts[level];
     
     NSArray *variants = [creatureDictionary[@"variantsText"] objectAtIndex:level];
-    for(int i=0; i<4; i++)
+    for(int i=0; i<variants.count; i++)
     {
         UIButton *btn = (id)[self.view viewWithTag:(i+1)*100];
         [btn setTitle:variants[i] forState:UIControlStateNormal];
