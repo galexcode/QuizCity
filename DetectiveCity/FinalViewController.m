@@ -46,6 +46,7 @@
 //        labelFrame.origin.y =  toolBarFrame.origin.y - labelFrame.size.height;
 //        label.frame = labelFrame;
     }];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"hexellence.png"]]];
 }
 
 - (void)didReceiveMemoryWarning

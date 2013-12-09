@@ -31,23 +31,33 @@
     UIBarButtonItem *btnMap = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStyleBordered target:self action:@selector(performMap)];
     UIBarButtonItem *btnClue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performClue)];
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:btnClue, btnMap, nil] animated:NO];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-
+    
     level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
     
     NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
     NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
     
     NSArray *texts = creatureDictionary[@"levelText"];
+    
+    NSString *background = [[NSBundle mainBundle] pathForResource:@"hexellence" ofType:@"png"];
+    NSString *htmlContentString = [NSString stringWithFormat:
+                                   @"<html>"
+                                   "<body background=\"file://%@\">"
+                                   "<h2 style=\"text-align:center;\">Level %d</h2>"
+                                   "<p style=\"text-align:center;\"><span style=\"font-size:20px;\">%@</span></p>"
+                                   "</body></html>", background, level+1, texts[level]];
+    
+    [self.webView loadHTMLString:htmlContentString baseURL:nil];
+    [self.webView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"hexellence.png"]]];
 
-    UITextView* textView = (id)[self.view viewWithTag:10];
-    textView.text = texts[level];
 }
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+}
+
 
 - (void)didReceiveMemoryWarning
 {

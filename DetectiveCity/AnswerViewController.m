@@ -69,11 +69,11 @@
             btnRetry.enabled = NO;
     }
     
-    NSArray *images = @[@"puzzle 1.png",@"puzzle 2.png",@"puzzle 3.png",@"puzzle 4.png"];
+    NSArray *images = @[@"puzzle 1.png",@"puzzle 4.png",@"puzzle 2.png",@"puzzle 3.png"];
     UIImageView *imageView = (id)[self.view viewWithTag:500];
     imageView.image = [UIImage imageNamed:images[level]];
     
-    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"hexellence.png"]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,7 +86,7 @@
 {
     NSLog(@"Retry");
     FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"Warring!"
-                                                          message:@"Are you sure?"
+                                                          message:[NSString stringWithFormat:@"You have only %d shots!", lives]
                                                          delegate:self cancelButtonTitle:@"No"
                                                 otherButtonTitles:@"Yes", nil];
     alertView.titleLabel.textColor = [UIColor cloudsColor];

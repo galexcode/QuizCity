@@ -10,5 +10,8 @@
 
 @interface LevelViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 - (void)hideBackButton;
+
 @end

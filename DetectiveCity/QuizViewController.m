@@ -46,8 +46,8 @@
     
     NSArray *texts = creatureDictionary[@"questionText"];
     
-    UITextView* textView = (id)[self.view viewWithTag:10];
-    textView.text = texts[level];
+    UILabel* label = (id)[self.view viewWithTag:10];
+    label.text = texts[level];
     
     NSArray *variants = [creatureDictionary[@"variantsText"] objectAtIndex:level];
     for(int i=0; i<variants.count; i++)
@@ -62,6 +62,7 @@
         [myButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
         [myButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     }
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"hexellence.png"]]];
 }
 
 - (void)didReceiveMemoryWarning

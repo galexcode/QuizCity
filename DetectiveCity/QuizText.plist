@@ -87,5 +87,12 @@
 			<string>37.53855</string>
 		</array>
 	</array>
+	<key>titleText</key>
+	<array>
+		<string>Собор Василия Блаженного</string>
+		<string>Большой Театр</string>
+		<string>Кремль</string>
+		<string>Москва Сити</string>
+	</array>
 </dict>
 </plist>
