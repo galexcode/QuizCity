@@ -48,8 +48,23 @@
     NSArray *texts = creatureDictionary[@"levelText"];
     quizSize = texts.count;
     
+    for(int i =0; i<level; i++)
+    {
+        if([answersSet containsObject:[NSNumber numberWithInt:i]])
+        {
+            UIImageView *imageView = (id)[self.view viewWithTag:(i+1)*100];
+            imageView.hidden = YES;
+        }
+    }
     if([answersSet containsObject:[NSNumber numberWithInt:level]])
-        NSLog(@"qqqq");
+    {
+        UIImageView *imageView = (id)[self.view viewWithTag:(level+1)*100];
+        [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
+            imageView.alpha = 0.0f;
+        } completion:^(BOOL finished) {
+            imageView.hidden = YES;
+        }];
+    }
     
     
 
