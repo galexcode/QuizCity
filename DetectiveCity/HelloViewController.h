@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StaticTableViewControllerProtocol.h"
-#import "StaticTableParentProtocol.h"
 
-@interface HelloViewController : UIViewController <StaticTableParentProtocol>
-@property (nonatomic, weak) UITableViewController <StaticTableViewControllerProtocol> *helloTableViewController;
+@interface HelloViewController : UIViewController
+- (IBAction)startTaped:(id)sender;
 
 @end

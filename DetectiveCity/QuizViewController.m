@@ -8,6 +8,8 @@
 
 #import "QuizViewController.h"
 #import "AnswerViewController.h"
+#import <FUIButton.h>
+#import <FlatUIKit/UIColor+FlatUI.h>
 
 @interface QuizViewController ()
 {
@@ -50,8 +52,15 @@
     NSArray *variants = [creatureDictionary[@"variantsText"] objectAtIndex:level];
     for(int i=0; i<variants.count; i++)
     {
-        UIButton *btn = (id)[self.view viewWithTag:(i+1)*100];
-        [btn setTitle:variants[i] forState:UIControlStateNormal];
+        FUIButton *myButton = (id)[self.view viewWithTag:(i+1)*100];
+        [myButton setTitle:variants[i] forState:UIControlStateNormal];
+        myButton.buttonColor = [UIColor colorFromHexCode:@"e75659"];
+        myButton.shadowColor = [UIColor colorFromHexCode:@"bb2c38"];
+        myButton.shadowHeight = 3.0f;
+        myButton.cornerRadius = 6.0f;
+//        myButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+        [myButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+        [myButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     }
 }
 

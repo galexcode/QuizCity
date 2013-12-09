@@ -7,7 +7,7 @@
 //
 
 #import "HelloViewController.h"
-#import "HelloTableViewController.h"
+#import <FlatUIKit.h>
 
 @interface HelloViewController ()
 
@@ -29,7 +29,28 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"logo.jpg"]];
+   
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor colorFromHexCode:@"e75659"]];
+   
+    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor colorFromHexCode:@"ff8c69"]
+                                  highlightedColor:[UIColor pomegranateColor]
+                                      cornerRadius:3];
     
+    [self.navigationItem.rightBarButtonItem removeTitleShadow];
+    [self.navigationItem.leftBarButtonItem removeTitleShadow];
+    
+
+    for(int i=0; i<3; i++)
+    {
+        FUIButton *myButton = (id)[self.view viewWithTag:(i+1)*100];
+        myButton.buttonColor = [UIColor colorFromHexCode:@"e75659"];
+        myButton.shadowColor = [UIColor colorFromHexCode:@"bb2c38"];
+        myButton.shadowHeight = 3.0f;
+        myButton.cornerRadius = 6.0f;
+        myButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+        [myButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+        [myButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,11 +66,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString: @"table"])
-    {
-        self.helloTableViewController = segue.destinationViewController;
-        self.helloTableViewController.delegate =self;
-    }
+
     if ([segue.identifier isEqualToString: @"start"])
     {
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Level"];
@@ -58,14 +75,8 @@
     }
 }
 
-- (void) tableView: (UITableView *) tableView
-         didSelect: (BOOL) select
-   cellAtIndexPath: (NSIndexPath *)indexPath
- inViewController : (UIViewController <StaticTableViewControllerProtocol> *) viewController;
+- (IBAction)startTaped:(id)sender
 {
-    if (indexPath.section == 0)
-        [self performSegueWithIdentifier:@"start" sender:nil];
-
+    [self performSegueWithIdentifier:@"start" sender:nil];
 }
-
 @end
