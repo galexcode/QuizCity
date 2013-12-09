@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <FUIAlertView.h>
+#import <FlatUIKit.h>
 
 @interface AnswerViewController : UIViewController <FUIAlertViewDelegate>
 

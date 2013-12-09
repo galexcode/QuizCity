@@ -26,7 +26,6 @@
 		006A8AA11850AD890003501F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006A8A831850AD890003501F /* UIKit.framework */; };
 		006A8AA91850AD890003501F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AA71850AD890003501F /* InfoPlist.strings */; };
 		006A8AAB1850AD890003501F /* DetectiveCityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A8AAA1850AD890003501F /* DetectiveCityTests.m */; };
-		006A8ABC1850B60E0003501F /* metro.png in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB61850B60E0003501F /* metro.png */; };
 		006A8ABD1850B60E0003501F /* moscowcity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB71850B60E0003501F /* moscowcity.jpg */; };
 		006A8ABE1850B60E0003501F /* blazh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB81850B60E0003501F /* blazh.jpg */; };
 		006A8ABF1850B60E0003501F /* kremlin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB91850B60E0003501F /* kremlin.jpg */; };
@@ -41,6 +40,9 @@
 		008A016C18557B3700EA4E89 /* hexellence.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016B18557B3700EA4E89 /* hexellence.png */; };
 		008A016E18557B3E00EA4E89 /* gplaypattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016D18557B3E00EA4E89 /* gplaypattern.png */; };
 		008A017018557B4A00EA4E89 /* escheresque.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016F18557B4A00EA4E89 /* escheresque.png */; };
+		008A01721855AFFD00EA4E89 /* kro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 008A01711855AFFD00EA4E89 /* kro.jpg */; };
+		008A01751855B54F00EA4E89 /* DAKeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 008A01741855B54F00EA4E89 /* DAKeyboardControl.m */; };
+		008A01781855B57E00EA4E89 /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 008A01771855B57E00EA4E89 /* FinalViewController.m */; };
 		00B7585918532E8C00FADDA3 /* QuizText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7585818532E8C00FADDA3 /* QuizText.plist */; };
 		00FA32ED1851F10D00D325B9 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32EC1851F10D00D325B9 /* red.png */; };
 		00FA32EF1851F17E00D325B9 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32EE1851F17E00D325B9 /* yellow.png */; };
@@ -90,7 +92,6 @@
 		006A8AA61850AD890003501F /* DetectiveCityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DetectiveCityTests-Info.plist"; sourceTree = "<group>"; };
 		006A8AA81850AD890003501F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		006A8AAA1850AD890003501F /* DetectiveCityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetectiveCityTests.m; sourceTree = "<group>"; };
-		006A8AB61850B60E0003501F /* metro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metro.png; sourceTree = "<group>"; };
 		006A8AB71850B60E0003501F /* moscowcity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moscowcity.jpg; sourceTree = "<group>"; };
 		006A8AB81850B60E0003501F /* blazh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blazh.jpg; sourceTree = "<group>"; };
 		006A8AB91850B60E0003501F /* kremlin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kremlin.jpg; sourceTree = "<group>"; };
@@ -105,6 +106,11 @@
 		008A016B18557B3700EA4E89 /* hexellence.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hexellence.png; sourceTree = "<group>"; };
 		008A016D18557B3E00EA4E89 /* gplaypattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gplaypattern.png; sourceTree = "<group>"; };
 		008A016F18557B4A00EA4E89 /* escheresque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = escheresque.png; sourceTree = "<group>"; };
+		008A01711855AFFD00EA4E89 /* kro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kro.jpg; sourceTree = "<group>"; };
+		008A01731855B54F00EA4E89 /* DAKeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAKeyboardControl.h; sourceTree = "<group>"; };
+		008A01741855B54F00EA4E89 /* DAKeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAKeyboardControl.m; sourceTree = "<group>"; };
+		008A01761855B57E00EA4E89 /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
+		008A01771855B57E00EA4E89 /* FinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
 		00B7585818532E8C00FADDA3 /* QuizText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizText.plist; sourceTree = "<group>"; };
 		00FA32EC1851F10D00D325B9 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		00FA32EE1851F17E00D325B9 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 		006A8A851850AD890003501F /* DetectiveCity */ = {
 			isa = PBXGroup;
 			children = (
+				008A01731855B54F00EA4E89 /* DAKeyboardControl.h */,
+				008A01741855B54F00EA4E89 /* DAKeyboardControl.m */,
 				006801601850F5040006DA59 /* HelloViewController.h */,
 				006801611850F5040006DA59 /* HelloViewController.m */,
 				006A8AB41850B5E50003501F /* pic */,
@@ -200,6 +208,8 @@
 				006A8A971850AD890003501F /* Images.xcassets */,
 				006A8A861850AD890003501F /* Supporting Files */,
 				00B7585818532E8C00FADDA3 /* QuizText.plist */,
+				008A01761855B57E00EA4E89 /* FinalViewController.h */,
+				008A01771855B57E00EA4E89 /* FinalViewController.m */,
 			);
 			path = DetectiveCity;
 			sourceTree = "<group>";
@@ -236,6 +246,7 @@
 		006A8AB41850B5E50003501F /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				008A01711855AFFD00EA4E89 /* kro.jpg */,
 				008A016F18557B4A00EA4E89 /* escheresque.png */,
 				008A016D18557B3E00EA4E89 /* gplaypattern.png */,
 				008A016B18557B3700EA4E89 /* hexellence.png */,
@@ -246,7 +257,6 @@
 				00FA32EE1851F17E00D325B9 /* yellow.png */,
 				00FA32EC1851F10D00D325B9 /* red.png */,
 				006A8AC11850B7DF0003501F /* puzzle green.png */,
-				006A8AB61850B60E0003501F /* metro.png */,
 				006A8AB71850B60E0003501F /* moscowcity.jpg */,
 				006A8AB81850B60E0003501F /* blazh.jpg */,
 				006A8AB91850B60E0003501F /* kremlin.jpg */,
@@ -344,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008A01721855AFFD00EA4E89 /* kro.jpg in Resources */,
 				008A01681855789600EA4E89 /* cubes.png in Resources */,
 				006A8A981850AD890003501F /* Images.xcassets in Resources */,
 				008A016A18557B2500EA4E89 /* arches.png in Resources */,
@@ -360,7 +371,6 @@
 				008A017018557B4A00EA4E89 /* escheresque.png in Resources */,
 				00B7585918532E8C00FADDA3 /* QuizText.plist in Resources */,
 				008A016E18557B3E00EA4E89 /* gplaypattern.png in Resources */,
-				006A8ABC1850B60E0003501F /* metro.png in Resources */,
 				00FA32F11851F31A00D325B9 /* green.png in Resources */,
 				008A016418556D5200EA4E89 /* puzzle 3.png in Resources */,
 				006A8ABE1850B60E0003501F /* blazh.jpg in Resources */,
@@ -424,7 +434,9 @@
 				0021D7BF1851C23500903FD0 /* PlaceViewController.m in Sources */,
 				006A8A8C1850AD890003501F /* main.m in Sources */,
 				00FA32F41851FDF200D325B9 /* AnswerViewController.m in Sources */,
+				008A01751855B54F00EA4E89 /* DAKeyboardControl.m in Sources */,
 				006801621850F5040006DA59 /* HelloViewController.m in Sources */,
+				008A01781855B57E00EA4E89 /* FinalViewController.m in Sources */,
 				0021D7BC1851C0C700903FD0 /* QuizViewController.m in Sources */,
 				0021D7C51851C57700903FD0 /* MyAnnotation.m in Sources */,
 			);

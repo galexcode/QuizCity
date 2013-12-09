@@ -68,7 +68,12 @@
         if(!lives)
             btnRetry.enabled = NO;
     }
-        
+    
+    NSArray *images = @[@"puzzle 1.png",@"puzzle 2.png",@"puzzle 3.png",@"puzzle 4.png"];
+    UIImageView *imageView = (id)[self.view viewWithTag:500];
+    imageView.image = [UIImage imageNamed:images[level]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,12 +100,11 @@
     alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
     alertView.defaultButtonTitleColor = [UIColor asbestosColor];
     [alertView show];
-//
+
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"%d",buttonIndex);
     if(buttonIndex==0)
     {
         lives--;

@@ -30,9 +30,11 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];
-    [self.navigationItem setRightBarButtonItem:btnContinue animated:NO];
     [self.navigationItem setHidesBackButton:YES animated:NO];
+    UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];
+    UIBarButtonItem *btnFinal = [[UIBarButtonItem alloc] initWithTitle:@"Final clue" style:UIBarButtonItemStyleBordered target:self action:@selector(performFinal)];
+    [self.navigationItem setLeftBarButtonItem:btnFinal animated:NO];
+    [self.navigationItem setRightBarButtonItem:btnContinue animated:NO];
 }
 
 - (void)viewDidLoad
@@ -41,6 +43,8 @@
 	// Do any additional setup after loading the view.
     level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
     answersSet = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"Answers"]];
+    
+    [self.navigationItem setHidesBackButton:YES animated:NO];
  
     NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
     NSDictionary *creatureDictionary = [[NSDictionary alloc] initWithContentsOfFile:plistCatPath];
@@ -65,8 +69,6 @@
             imageView.hidden = YES;
         }];
     }
-    
-    
 
 }
 
@@ -81,6 +83,12 @@
     NSLog(@"Continue");
     if(level!=quizSize-1)
         [self performSegueWithIdentifier:@"level" sender:nil];
+}
+
+- (void)performFinal
+{
+    NSLog(@"Final");
+    [self performSegueWithIdentifier:@"final" sender:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

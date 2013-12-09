@@ -77,7 +77,7 @@
 - (void)performHome
 {
     NSLog(@"Home");
-    [self performSegueWithIdentifier:@"hello" sender:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)performProgress
