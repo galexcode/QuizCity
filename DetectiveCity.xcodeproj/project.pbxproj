@@ -26,7 +26,6 @@
 		006A8AA11850AD890003501F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006A8A831850AD890003501F /* UIKit.framework */; };
 		006A8AA91850AD890003501F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AA71850AD890003501F /* InfoPlist.strings */; };
 		006A8AAB1850AD890003501F /* DetectiveCityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A8AAA1850AD890003501F /* DetectiveCityTests.m */; };
-		006A8ABB1850B60E0003501F /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB51850B60E0003501F /* logo.jpg */; };
 		006A8ABC1850B60E0003501F /* metro.png in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB61850B60E0003501F /* metro.png */; };
 		006A8ABD1850B60E0003501F /* moscowcity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB71850B60E0003501F /* moscowcity.jpg */; };
 		006A8ABE1850B60E0003501F /* blazh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A8AB81850B60E0003501F /* blazh.jpg */; };
@@ -37,6 +36,11 @@
 		008A016418556D5200EA4E89 /* puzzle 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016018556D5200EA4E89 /* puzzle 3.png */; };
 		008A016518556D5200EA4E89 /* puzzle 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016118556D5200EA4E89 /* puzzle 4.png */; };
 		008A016618556D5200EA4E89 /* puzzle 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016218556D5200EA4E89 /* puzzle 1.png */; };
+		008A01681855789600EA4E89 /* cubes.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A01671855789600EA4E89 /* cubes.png */; };
+		008A016A18557B2500EA4E89 /* arches.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016918557B2400EA4E89 /* arches.png */; };
+		008A016C18557B3700EA4E89 /* hexellence.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016B18557B3700EA4E89 /* hexellence.png */; };
+		008A016E18557B3E00EA4E89 /* gplaypattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016D18557B3E00EA4E89 /* gplaypattern.png */; };
+		008A017018557B4A00EA4E89 /* escheresque.png in Resources */ = {isa = PBXBuildFile; fileRef = 008A016F18557B4A00EA4E89 /* escheresque.png */; };
 		00B7585918532E8C00FADDA3 /* QuizText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00B7585818532E8C00FADDA3 /* QuizText.plist */; };
 		00FA32ED1851F10D00D325B9 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32EC1851F10D00D325B9 /* red.png */; };
 		00FA32EF1851F17E00D325B9 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 00FA32EE1851F17E00D325B9 /* yellow.png */; };
@@ -86,7 +90,6 @@
 		006A8AA61850AD890003501F /* DetectiveCityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DetectiveCityTests-Info.plist"; sourceTree = "<group>"; };
 		006A8AA81850AD890003501F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		006A8AAA1850AD890003501F /* DetectiveCityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetectiveCityTests.m; sourceTree = "<group>"; };
-		006A8AB51850B60E0003501F /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		006A8AB61850B60E0003501F /* metro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metro.png; sourceTree = "<group>"; };
 		006A8AB71850B60E0003501F /* moscowcity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moscowcity.jpg; sourceTree = "<group>"; };
 		006A8AB81850B60E0003501F /* blazh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blazh.jpg; sourceTree = "<group>"; };
@@ -97,6 +100,11 @@
 		008A016018556D5200EA4E89 /* puzzle 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "puzzle 3.png"; sourceTree = "<group>"; };
 		008A016118556D5200EA4E89 /* puzzle 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "puzzle 4.png"; sourceTree = "<group>"; };
 		008A016218556D5200EA4E89 /* puzzle 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "puzzle 1.png"; sourceTree = "<group>"; };
+		008A01671855789600EA4E89 /* cubes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cubes.png; sourceTree = "<group>"; };
+		008A016918557B2400EA4E89 /* arches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arches.png; sourceTree = "<group>"; };
+		008A016B18557B3700EA4E89 /* hexellence.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hexellence.png; sourceTree = "<group>"; };
+		008A016D18557B3E00EA4E89 /* gplaypattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gplaypattern.png; sourceTree = "<group>"; };
+		008A016F18557B4A00EA4E89 /* escheresque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = escheresque.png; sourceTree = "<group>"; };
 		00B7585818532E8C00FADDA3 /* QuizText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuizText.plist; sourceTree = "<group>"; };
 		00FA32EC1851F10D00D325B9 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		00FA32EE1851F17E00D325B9 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
@@ -228,12 +236,16 @@
 		006A8AB41850B5E50003501F /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				008A016F18557B4A00EA4E89 /* escheresque.png */,
+				008A016D18557B3E00EA4E89 /* gplaypattern.png */,
+				008A016B18557B3700EA4E89 /* hexellence.png */,
+				008A016918557B2400EA4E89 /* arches.png */,
+				008A01671855789600EA4E89 /* cubes.png */,
 				008A015E18556D3C00EA4E89 /* puzzle */,
 				00FA32F01851F31A00D325B9 /* green.png */,
 				00FA32EE1851F17E00D325B9 /* yellow.png */,
 				00FA32EC1851F10D00D325B9 /* red.png */,
 				006A8AC11850B7DF0003501F /* puzzle green.png */,
-				006A8AB51850B60E0003501F /* logo.jpg */,
 				006A8AB61850B60E0003501F /* metro.png */,
 				006A8AB71850B60E0003501F /* moscowcity.jpg */,
 				006A8AB81850B60E0003501F /* blazh.jpg */,
@@ -332,18 +344,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008A01681855789600EA4E89 /* cubes.png in Resources */,
 				006A8A981850AD890003501F /* Images.xcassets in Resources */,
+				008A016A18557B2500EA4E89 /* arches.png in Resources */,
 				006A8AC21850B7DF0003501F /* puzzle green.png in Resources */,
 				008A016618556D5200EA4E89 /* puzzle 1.png in Resources */,
 				006A8ABF1850B60E0003501F /* kremlin.jpg in Resources */,
+				008A016C18557B3700EA4E89 /* hexellence.png in Resources */,
 				00FA32EF1851F17E00D325B9 /* yellow.png in Resources */,
 				006A8A8A1850AD890003501F /* InfoPlist.strings in Resources */,
 				008A016518556D5200EA4E89 /* puzzle 4.png in Resources */,
 				008A016318556D5200EA4E89 /* puzzle 2.png in Resources */,
 				006A8AC01850B60E0003501F /* teatr.jpg in Resources */,
 				006A8A931850AD890003501F /* Main.storyboard in Resources */,
-				006A8ABB1850B60E0003501F /* logo.jpg in Resources */,
+				008A017018557B4A00EA4E89 /* escheresque.png in Resources */,
 				00B7585918532E8C00FADDA3 /* QuizText.plist in Resources */,
+				008A016E18557B3E00EA4E89 /* gplaypattern.png in Resources */,
 				006A8ABC1850B60E0003501F /* metro.png in Resources */,
 				00FA32F11851F31A00D325B9 /* green.png in Resources */,
 				008A016418556D5200EA4E89 /* puzzle 3.png in Resources */,

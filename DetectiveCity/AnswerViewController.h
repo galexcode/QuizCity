@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FUIAlertView.h>
 
-@interface AnswerViewController : UIViewController
+@interface AnswerViewController : UIViewController <FUIAlertViewDelegate>
 
 @property (strong, nonatomic) NSString* answer;
 

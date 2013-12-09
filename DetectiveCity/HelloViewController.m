@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"logo.jpg"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"hexellence.png"]];
    
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor colorFromHexCode:@"e75659"]];
    
@@ -70,6 +70,7 @@
     if ([segue.identifier isEqualToString: @"start"])
     {
         [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Level"];
+        [[NSUserDefaults standardUserDefaults] setInteger:2 forKey:@"Lives"];
         NSMutableSet *set = [NSMutableSet set];
         [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:set] forKey:@"Answers"];
     }

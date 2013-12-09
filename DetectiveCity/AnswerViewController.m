@@ -12,6 +12,7 @@
 {
     NSInteger level;
     NSMutableSet *answersSet;
+    NSInteger lives;
 }
 @end
 
@@ -40,6 +41,7 @@
     
 //    UIImageView * imageView = (id)[cell.contentView viewWithTag:200];
     level = [[NSUserDefaults standardUserDefaults] integerForKey:@"Level"];
+    lives = [[NSUserDefaults standardUserDefaults] integerForKey:@"Lives"];
     answersSet = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"Answers"]];
     
     NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:@"QuizText" ofType:@"plist"];
@@ -61,8 +63,10 @@
     else
     {
         resultLabel.text = @"Incorrect =(";
-        UIBarButtonItem *btnRetry = [[UIBarButtonItem alloc] initWithTitle:@"Retry" style:UIBarButtonItemStyleBordered target:self action:@selector(retryTaped)];
+        UIBarButtonItem *btnRetry = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"Retry: %d", lives] style:UIBarButtonItemStyleBordered target:self action:@selector(retryTaped)];
         [self.navigationItem setLeftBarButtonItem:btnRetry animated:NO];
+        if(!lives)
+            btnRetry.enabled = NO;
     }
         
 }
@@ -76,10 +80,33 @@
 - (void)retryTaped
 {
     NSLog(@"Retry");
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        NSLog(@"Dismiss completed");
-//    }];
-    [self.navigationController popViewControllerAnimated:YES];
+    FUIAlertView *alertView = [[FUIAlertView alloc] initWithTitle:@"Warring!"
+                                                          message:@"Are you sure?"
+                                                         delegate:self cancelButtonTitle:@"No"
+                                                otherButtonTitles:@"Yes", nil];
+    alertView.titleLabel.textColor = [UIColor cloudsColor];
+    alertView.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    alertView.messageLabel.textColor = [UIColor cloudsColor];
+    alertView.messageLabel.font = [UIFont flatFontOfSize:14];
+    alertView.backgroundOverlay.backgroundColor = [[UIColor cloudsColor] colorWithAlphaComponent:0.8];
+    alertView.alertContainer.backgroundColor = [UIColor midnightBlueColor];
+    alertView.defaultButtonColor = [UIColor cloudsColor];
+    alertView.defaultButtonShadowColor = [UIColor asbestosColor];
+    alertView.defaultButtonFont = [UIFont boldFlatFontOfSize:16];
+    alertView.defaultButtonTitleColor = [UIColor asbestosColor];
+    [alertView show];
+//
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"%d",buttonIndex);
+    if(buttonIndex==0)
+    {
+        lives--;
+        [[NSUserDefaults standardUserDefaults] setInteger:lives forKey:@"Lives"];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)performContinue

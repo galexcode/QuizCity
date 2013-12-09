@@ -67,7 +67,7 @@
         locations[i] = pin;
     }
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(((MyAnnotation*)locations[level]).coordinate, 2000, 2000);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(((MyAnnotation*)locations[level]).coordinate, 700, 700);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     [self.mapView setRegion:adjustedRegion animated:YES];
     
@@ -101,10 +101,15 @@
         pin.annotation = annotation;
     }
 
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return pin;
+    }
+    pin.selected = NO;
     MyAnnotation *myannatation = (MyAnnotation*)annotation;
     switch (myannatation.picTag) {
         case 1:
             pin.image = [UIImage imageNamed:@"yellow.png"];
+//            pin.
             break;
         case 2:
             pin.image = [UIImage imageNamed:@"green.png"];
@@ -119,6 +124,7 @@
     
     return pin;
 }
+
 
 
 @end
