@@ -183,6 +183,7 @@
 		006A8A851850AD890003501F /* DetectiveCity */ = {
 			isa = PBXGroup;
 			children = (
+				006A8A911850AD890003501F /* Main.storyboard */,
 				008A01731855B54F00EA4E89 /* DAKeyboardControl.h */,
 				008A01741855B54F00EA4E89 /* DAKeyboardControl.m */,
 				006801601850F5040006DA59 /* HelloViewController.h */,
@@ -190,7 +191,6 @@
 				006A8AB41850B5E50003501F /* pic */,
 				006A8A8E1850AD890003501F /* AppDelegate.h */,
 				006A8A8F1850AD890003501F /* AppDelegate.m */,
-				006A8A911850AD890003501F /* Main.storyboard */,
 				00FA32F5185260C100D325B9 /* ProgressViewController.h */,
 				00FA32F6185260C100D325B9 /* ProgressViewController.m */,
 				0021D7C01851C40D00903FD0 /* MapViewController.h */,
@@ -325,6 +325,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = zhorkov023;
 				TargetAttributes = {
+					006A8A7B1850AD890003501F = {
+						DevelopmentTeam = PEGD7N2MSW;
+					};
 					006A8A9C1850AD890003501F = {
 						TestTargetID = 006A8A7B1850AD890003501F;
 					};
@@ -566,11 +569,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DetectiveCity/DetectiveCity-Prefix.pch";
 				INFOPLIST_FILE = "DetectiveCity/DetectiveCity-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E86BB447-FAD6-40EE-8391-56C278DD549F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -581,11 +586,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DetectiveCity/DetectiveCity-Prefix.pch";
 				INFOPLIST_FILE = "DetectiveCity/DetectiveCity-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "610A7BB2-3953-4404-A2A4-D8BA7AD06C1D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 
 #import "HelloViewController.h"
 #import <FlatUIKit.h>
+#define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 
 @interface HelloViewController ()
 
@@ -32,12 +33,15 @@
    
     [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor colorFromHexCode:@"e75659"]];
    
-    [UIBarButtonItem configureFlatButtonsWithColor:[UIColor colorFromHexCode:@"ff8c69"]
-                                  highlightedColor:[UIColor pomegranateColor]
-                                      cornerRadius:3];
+    if(!IS_OS_7_OR_LATER)
+        [UIBarButtonItem configureFlatButtonsWithColor:[UIColor colorFromHexCode:@"ff8c69"]
+                                      highlightedColor:[UIColor pomegranateColor]
+                                          cornerRadius:3];
     
     [self.navigationItem.rightBarButtonItem removeTitleShadow];
     [self.navigationItem.leftBarButtonItem removeTitleShadow];
+
+    self.navigationController.navigationBar.tintColor = [UIColor cloudsColor];
     
 
     for(int i=0; i<3; i++)
