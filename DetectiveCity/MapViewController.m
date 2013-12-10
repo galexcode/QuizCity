@@ -93,10 +93,10 @@
 }
 
 - (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation {
-    MKPinAnnotationView *pin = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: @"myPin"];
+    MKAnnotationView *pin = (MKAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: @"myPin"];
     
     if (pin == nil) {
-        pin = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: @"myPin"];
+        pin = [[MKAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: @"myPin"];
     } else {
         pin.annotation = annotation;
     }
@@ -109,7 +109,6 @@
     switch (myannatation.picTag) {
         case 1:
             pin.image = [UIImage imageNamed:@"yellow.png"];
-//            pin.
             break;
         case 2:
             pin.image = [UIImage imageNamed:@"green.png"];
