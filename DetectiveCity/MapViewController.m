@@ -32,8 +32,7 @@
 {
     
     UIBarButtonItem *btnHome = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStyleBordered target:self action:@selector(performHome)];
-    UIBarButtonItem *btnProgress = [[UIBarButtonItem alloc] initWithTitle:@"Progress" style:UIBarButtonItemStyleBordered target:self action:@selector(performProgress)];
-    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:btnProgress, btnHome, nil]];
+    [self.navigationItem setRightBarButtonItem:btnHome];
 }
 
 - (void)viewDidLoad
@@ -78,12 +77,6 @@
 {
     NSLog(@"Home");
     [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
-- (void)performProgress
-{
-    NSLog(@"Progress");
-       [self performSegueWithIdentifier:@"progress" sender:nil];
 }
 
 - (void)didReceiveMemoryWarning

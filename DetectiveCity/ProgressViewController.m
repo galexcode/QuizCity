@@ -32,8 +32,6 @@
 {
     [self.navigationItem setHidesBackButton:YES animated:NO];
     UIBarButtonItem *btnContinue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStyleBordered target:self action:@selector(performContinue)];
-    UIBarButtonItem *btnFinal = [[UIBarButtonItem alloc] initWithTitle:@"Final clue" style:UIBarButtonItemStyleBordered target:self action:@selector(performFinal)];
-    [self.navigationItem setLeftBarButtonItem:btnFinal animated:NO];
     [self.navigationItem setRightBarButtonItem:btnContinue animated:NO];
 }
 
@@ -69,7 +67,7 @@
             imageView.hidden = YES;
         }];
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,12 +81,8 @@
     NSLog(@"Continue");
     if(level!=quizSize-1)
         [self performSegueWithIdentifier:@"level" sender:nil];
-}
-
-- (void)performFinal
-{
-    NSLog(@"Final");
-    [self performSegueWithIdentifier:@"final" sender:nil];
+    else
+        [self performSegueWithIdentifier:@"final" sender:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

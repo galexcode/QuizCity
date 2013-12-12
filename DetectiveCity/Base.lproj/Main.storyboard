@@ -107,7 +107,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapView" destination="Jzy-Fd-pO1" id="Vc8-8C-4Id"/>
-                        <segue destination="gI2-EO-hP3" kind="push" identifier="progress" id="p3D-xr-S99"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20G-5A-qRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -530,7 +529,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="3Cs-yZ-5RD"/>
-        <segue reference="GGP-DA-pZl"/>
         <segue reference="2Pa-Vw-5B3"/>
     </inferredMetricsTieBreakers>
 </document>
